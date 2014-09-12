@@ -27,7 +27,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-lab:before {
+.icon-sad:before {
 	content: "\e600";
 }
 .icon-point-up:before {
@@ -37,14 +37,14 @@
 	content: "\e602";
 }
 .icon-github:before {
-	content: "\e604";
-}
-.icon-linkedin:before {
-	content: "\e605";
-}
-.icon-libreoffice:before {
 	content: "\e603";
 }
-.icon-zoomin:before {
+.icon-linkedin:before {
+	content: "\e604";
+}
+.icon-file-pdf:before {
 	content: "\e606";
+}
+.icon-file-word:before {
+	content: "\e607";
 }

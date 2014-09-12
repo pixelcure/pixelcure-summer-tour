@@ -715,7 +715,7 @@ strong {
 }
 
 /* line 30, ../sass/2_Pieces/_icons.scss */
-.icon-lab:before {
+.icon-sad:before {
   content: "\e600";
 }
 
@@ -731,22 +731,22 @@ strong {
 
 /* line 39, ../sass/2_Pieces/_icons.scss */
 .icon-github:before {
-  content: "\e604";
+  content: "\e603";
 }
 
 /* line 42, ../sass/2_Pieces/_icons.scss */
 .icon-linkedin:before {
-  content: "\e605";
+  content: "\e604";
 }
 
 /* line 45, ../sass/2_Pieces/_icons.scss */
-.icon-libreoffice:before {
-  content: "\e603";
+.icon-file-pdf:before {
+  content: "\e606";
 }
 
 /* line 48, ../sass/2_Pieces/_icons.scss */
-.icon-zoomin:before {
-  content: "\e606";
+.icon-file-word:before {
+  content: "\e607";
 }
 
 /* line 4, ../sass/3_Components/_component.scss */
