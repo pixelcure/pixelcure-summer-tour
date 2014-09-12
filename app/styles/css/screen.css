@@ -1357,62 +1357,66 @@ section.hero div.hero-inner .scroll-down img.scroll {
   background-image: none !important;
   height: initial !important;
 }
-/* line 13, ../sass/6_Pages/_404.scss */
+/* line 9, ../sass/6_Pages/_404.scss */
+.page-not-found .sad-face {
+  vertical-align: -3px;
+}
+/* line 17, ../sass/6_Pages/_404.scss */
 .page-not-found .hero-inner .hero-content.four-oh-four {
   margin: 100px 0 0 0;
 }
 @media screen and (max-width: 960px) {
-  /* line 13, ../sass/6_Pages/_404.scss */
+  /* line 17, ../sass/6_Pages/_404.scss */
   .page-not-found .hero-inner .hero-content.four-oh-four {
     margin-top: 0;
     transition: 1s;
   }
-  /* line 20, ../sass/6_Pages/_404.scss */
+  /* line 24, ../sass/6_Pages/_404.scss */
   .page-not-found .hero-inner .hero-content.four-oh-four figure.face {
     display: none;
     transition: .5s;
   }
 }
-/* line 27, ../sass/6_Pages/_404.scss */
+/* line 31, ../sass/6_Pages/_404.scss */
 .page-not-found .hero-inner .hero-content.four-oh-four .message {
   margin-top: 120px;
   padding: 50px;
 }
-/* line 31, ../sass/6_Pages/_404.scss */
+/* line 35, ../sass/6_Pages/_404.scss */
 .page-not-found .hero-inner .hero-content.four-oh-four .message img {
   display: none;
   margin: 50px auto 0;
   width: 80%;
 }
 @media screen and (max-width: 960px) {
-  /* line 27, ../sass/6_Pages/_404.scss */
+  /* line 31, ../sass/6_Pages/_404.scss */
   .page-not-found .hero-inner .hero-content.four-oh-four .message {
     margin-top: 50px;
     padding: 0;
     transition: .5s;
     width: 100%;
   }
-  /* line 43, ../sass/6_Pages/_404.scss */
+  /* line 47, ../sass/6_Pages/_404.scss */
   .page-not-found .hero-inner .hero-content.four-oh-four .message img {
     display: block;
   }
 }
-/* line 49, ../sass/6_Pages/_404.scss */
+/* line 53, ../sass/6_Pages/_404.scss */
 .page-not-found .hero-inner .hero-content.four-oh-four .message ul {
   color: white;
 }
-/* line 53, ../sass/6_Pages/_404.scss */
+/* line 57, ../sass/6_Pages/_404.scss */
 .page-not-found .hero-inner .hero-content.four-oh-four .message a.home {
   background: #d93537;
   margin-top: 25px;
   width: 50%;
 }
-/* line 58, ../sass/6_Pages/_404.scss */
+/* line 62, ../sass/6_Pages/_404.scss */
 .page-not-found .hero-inner .hero-content.four-oh-four .message a.home:hover {
   background: #00534b;
 }
 @media screen and (max-width: 960px) {
-  /* line 53, ../sass/6_Pages/_404.scss */
+  /* line 57, ../sass/6_Pages/_404.scss */
   .page-not-found .hero-inner .hero-content.four-oh-four .message a.home {
     transition: .3s;
     width: 100%;
