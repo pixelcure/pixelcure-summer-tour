@@ -35,9 +35,6 @@ define(['jquery', 'backbone'], function(){
 					
 					// modal
 					$modal = that.modal.modal;
-					
-					// modal image
-					$imageLarge = that.modal.img;
 
 					$(window).resize(function (){
 
@@ -46,10 +43,9 @@ define(['jquery', 'backbone'], function(){
 							that.modal.modal.hide();
 
 						}
-						
+
 					});
-
-
+					
 			},
 
 			// close Modal
