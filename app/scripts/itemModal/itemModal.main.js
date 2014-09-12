@@ -8,7 +8,7 @@ define(['jquery', 'backbone'], function(){
 			initialize : function () {
 
 					// position modal
-					//this.modalPositioning();
+					this.modalPositioning();
 
 			},
 
@@ -39,13 +39,16 @@ define(['jquery', 'backbone'], function(){
 					// modal image
 					$imageLarge = that.modal.img;
 
-					$(window).resize();
+					$(window).resize(function (){
 
-					if( $(window).width() < 760 && that.modal.modal.is(':visible') ){
+						if( $(window).width() < 760 ){
 
-						// fixModal();
+							that.modal.modal.hide();
 
-					}
+						}
+						
+					});
+
 
 			},
 
@@ -75,18 +78,24 @@ define(['jquery', 'backbone'], function(){
 					var imageURL = $( e.currentTarget ).find('img').attr('src');
 					var imageTitle = $( e.currentTarget ).find('img').attr('title');
 					var imageBlurb = $( e.currentTarget ).find('img').data('blurb');
+					
+					if( $(window).width() > 760 ){
 
-					// load image into dom and 
-					that.modal.modal.find('img').attr('src', imageURL).load(function(){
+						// load image into dom and 
+						that.modal.modal.find('img').attr('src', imageURL).load(function(){
 
-					// add modal title and blurb
-					that.modal.title.text( imageTitle );
-					that.modal.blurb.text( imageBlurb );
-			
-					// open Modal
-					that.modal.modal.height( $( document.body ).height() ).fadeIn(100);
+							// add modal title and blurb
+							that.modal.title.text( imageTitle );
+							that.modal.blurb.text( imageBlurb );
+				
+							// open Modal
+							that.modal.modal.height( $( document.body ).height() ).fadeIn(100);
 
-				});
+						});
+
+					} else {
+						that.modal.modal.hide();
+					}
 
 
 			}
