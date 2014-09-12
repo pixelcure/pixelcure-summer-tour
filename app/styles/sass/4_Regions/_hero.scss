@@ -1,0 +1,196 @@
+  /////////////////////////////////////
+ // HERO SECTION /////////////////////
+/////////////////////////////////////
+
+
+section.hero {
+	background: url('/images/chemistry-set.png') bottom no-repeat $teal;
+	@include background-size(contain);
+	position: relative;
+	padding: 0 0 250px 0;
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+	
+	@include max-height(850px){
+		height: initial;
+	}
+
+	@include max-screen(645px){
+		height: auto;
+		min-height: auto;
+		padding-bottom: 150px;
+	}
+
+	.welcome {
+		@extend .row;
+		background: $medicalGreen;
+		@include box-shadow(0px 3px 5px rgba(0, 0, 0,0.5));
+		margin-top: 0;
+		padding-top: 85px;
+
+		h1 {
+			color: $white;
+			font-family: $oleo;
+			@include font-size(28px);
+			font-weight: 100;
+			margin: 0;
+			padding-right: 5%;
+
+			@include max-screen(480px){
+				@include font-size(18px);
+				width: 100%;
+			}		
+		}
+
+		// Hire Tag
+		.available {
+				bottom: -43px;
+				@include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+				position: relative;
+
+				@include max-screen(830px){
+					bottom: 0;
+					margin-top: 20px;			
+				}
+
+				@include max-screen(730px){
+					margin-top: 15px;
+				}
+
+				@include max-screen(480px){
+					width: 100%;
+				}
+
+				a {
+					background: $blood;
+					color: $white;
+					font-weight: 600;
+					font-family: $oleo;
+					@include font-size(14px);
+					padding: percentage(25/960);
+					@extend .button;
+
+					@include max-screen(850px){
+						@include font-size(12px);
+					}	
+				}
+		} // End Available
+
+	} // End Welcome <---
+
+	div.hero-inner {
+
+		.hero-content {
+			margin: 50px 0 0 0;
+			padding-bottom: 25px;
+
+			h2 {
+				color: $white;
+				display: block;
+				font-family: $oleo;
+				@include font-size(31px);
+				margin: 0;
+				text-shadow: 1px 1px 1px $medicalGreen;
+
+				@include max-screen(520px){
+					@include font-size(24px);
+				}
+			}
+
+			p {
+				color: $white;
+				@include font-size(18px);
+				text-shadow: 1px 1px 1px $medicalGreen;
+				line-height: 1.8em;
+				font-weight: 100;
+
+				@include max-screen(520px){
+					@include font-size(16px);
+					line-height: 2em;
+				}
+			}
+			.about-blurb {
+				margin-top: 55px;
+				
+				@inclue max-screen(1200px){
+					margin-top: 45px;
+				}
+
+				@include max-screen(1075px){
+					margin-top: 35px;
+				}
+
+				@include max-screen(960px){
+					margin-top: 0;
+					transition: .5s;
+					width: 100%;
+				}
+			}
+	
+			ul.skillset {
+				@include font-size(18px);
+				font-family: $oleo;
+				list-style: none;
+				padding-left: 0;
+				margin: 20px 0 0 0;
+				
+				@include max-screen(1080px){
+					@include font-size(16px);
+				}
+
+				@include max-screen(960px){
+					transition: .5s;
+				}
+
+				@include max-screen(640px){
+					&:last-child { margin-top: 0; }
+
+					&.two {
+						li:first-child { margin-top: 0; }
+					}
+				}
+
+				li {
+					background: $lightGreen;
+					color: $white;
+					text-shadow: 1px 1px 1px $black;
+					text-align: center;
+					margin:  15px;
+					padding: 15px 0 15px 0;
+
+					@include max-screen(960px){
+						margin: 15px 0;
+					}
+				}
+			}
+
+		} // end Hero Content  <---
+
+		.scroll-down {
+			h1 {
+				color: $white;
+				font-family: $oleo;
+				@include font-size(23px);
+				text-align: center;
+				
+				@include max-screen(890px){
+					@include font-size(18px);
+				}
+
+			}
+			img.scroll {
+				max-width: 60px;
+				display: block;
+				margin: 15px auto 0;				
+
+				@include max-screen(890px){
+					max-width: 40px;
+				}
+
+			}
+		}
+
+	} // End Hero Inner  <---
+
+} // End Hero  <---

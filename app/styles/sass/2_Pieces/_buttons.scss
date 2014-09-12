@@ -1,0 +1,50 @@
+  ////////////////////////////////
+ // BUTTONS  ////////////////////
+////////////////////////////////
+[data-role="top-btn"] {
+    background: $medicalGreen;
+    @include border-radius(360px);
+    @include box-shadow(0 0 5px $medicalGreen);
+    @include font-size(18px);
+    color: #FFF;
+    display: block;
+    height: 100%;
+    text-align: center;
+
+    &:hover {
+        background: darken($teal, 10%);
+    }    
+
+} // End Top Button <---
+
+[data-role="button"], .button{
+
+    display:inline-block;
+    padding:10px;
+    text-align: center;
+    width: 100%;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited{
+        text-decoration:none;
+
+    }
+
+    &:hover{
+        background: darken($blood, 5%);
+        transition: .3s;
+    }
+
+    &:active,
+    &:focus{
+       background: darken($blood, 15%);
+
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+} // End Global Button <---
+

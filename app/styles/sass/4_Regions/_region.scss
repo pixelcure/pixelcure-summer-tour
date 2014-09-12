@@ -1,0 +1,31 @@
+  ////////////////////////////////////
+ // GLOBAL VIEW /////////////////////
+////////////////////////////////////
+
+.view {
+	// background: $bgGreen;
+	color: $medicalGreen;
+	width: 100%;
+
+	@include max-screen(645px){
+		min-height: auto;
+		height: auto;
+	}
+
+	.welcome { margin-top: 0; }
+
+	.title-bar {
+		background: $medicalGreen;
+		@include box-shadow(0px 3px 5px rgba(0, 0, 0,0.5));
+		margin-top: 0;
+
+		h1, h2, h3 {
+			color: $white;
+			font-family: $oleo;
+			@include font-size(28px);
+			font-weight: 100;
+			margin: 0;
+		}
+	} // End Title Bar <---
+
+} // end view  <---

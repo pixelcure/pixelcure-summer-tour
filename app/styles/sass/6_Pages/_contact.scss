@@ -1,0 +1,210 @@
+  ////////////////////////////////
+ // CONTACT /////////////////////
+////////////////////////////////
+
+.view {
+
+	&.contact {
+		background: url('/images/contact-pixels.png') bottom right no-repeat $white;
+		@include background-size(285px);
+		@include box-shadow(0px 5px 40px $medicalGreen);
+
+		@include max-screen(985px){
+			@include background-size(235px);
+		}
+		
+		@include max-screen(715px){
+			@include background-size(200px);
+		}
+
+		@include max-screen(440px){
+			@include background-size(140px);
+		}
+
+		h2 {
+			@include font-size(21px);
+			font-weight: 100;
+			margin-bottom: 35px;
+		}
+
+		p {
+			color: rgba(94, 94, 94, 0.5);
+			@include font-size(13px);					
+
+			@include max-screen(960px){
+				@include font-size(12px);
+			}
+		}
+		
+		.inner-wrapper.contact {
+			margin-bottom: 0;
+			padding-bottom: 75px;
+
+			.contact-form {
+				background: $bgGreen;
+				margin-top: 25px;
+				padding: 25px;
+
+				@include max-screen(700px){
+					background: none;
+					float: none;
+					padding: 0;
+					width: 100%;
+				}
+				
+				div.loading {
+					display: none;
+
+					img.loading {
+						display: block;
+						max-width: 50px;
+						margin: 0 auto;
+					}
+				}
+
+				form {
+					margin: 0 45px 0 0;
+
+					@include max-screen(700px){
+						margin: 45px 0 0 0;
+					}
+
+					fieldset {
+						border: none;
+						padding-left: 0;
+
+						input[type="text"], input[type="email"], textarea {
+							border-bottom: 1px solid $medicalGreen;
+							background: none;
+							border-top: none;
+							border-left: none;
+							border-right: none;
+							color: $teal;
+							@include font-size(16px);
+							font-family: $oleo;
+							letter-spacing: 0.07em;
+							padding: 15px;
+							resize: none;
+							width: 100%;
+							&:disabled { color: $white; }		
+							&:focus {
+								border: 1px solid $teal;
+								color: $teal;
+								outline: none;
+								transition: .4s;
+							}
+
+						}
+
+						textarea {
+							height: 200px;
+							letter-spacing: 0.07em;
+						}
+
+						input[type="submit"] {
+							background: $teal;
+							border: none;
+							color: $white;
+							font-weight: 600;
+							font-family: $oleo;
+							@include font-size(14px);
+							padding: percentage(25/960);
+							@extend .button;
+							&:hover {
+								 background: darken($teal, 5%);
+							}
+							@include max-screen(850px){
+								@include font-size(12px);
+							}	
+						}
+
+						// invalid form item
+						.not-valid {
+							border: 1px solid $blood!important;
+						}
+
+					} // End Fieldset
+
+				} // End Contact Form
+				
+				.email-sent {
+					h2 {
+						display: none;
+						font-family: $oleo;
+						margin-top: 35px!important;
+						text-align: center;
+						
+						&.error, &.robot, &.field-error {
+							color: $blood;							
+						}
+
+					}
+				}
+
+			} // End Inner Wrapper Contact
+
+		} // End Contact Form <---
+
+		.sidebar {
+			padding-left: 25px;
+
+			@include max-screen(700px){
+				float: none;
+				margin-top: 45px;
+				padding-left: 0;
+				transition: .5s;
+				width: 100%;
+			}
+
+			h2 {
+				clear: both;
+				display: block;
+				font-family: $oleo;
+				line-height: 1.5em;
+				margin-bottom: 10px;
+				text-align: right;
+			
+				@include max-screen(700px){
+					text-align: left;
+					transition: .5s;					
+				}
+			}
+
+			ul.links {
+				float: right;
+				list-style: none;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+
+				@include max-screen(700px){
+					float: none;
+				}
+
+				li {
+					@include font-size(35px);
+					float: left;
+					margin-right: 15px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					a {
+						// color: #3d3c3e;
+						color: $teal;
+					
+						&:hover {
+							transition: .2s;
+							color: darken($teal, 5%);
+						}
+					}
+				}
+
+			}
+
+		} // End Sidebar <---
+
+	} // End Contact <---
+
+} // End View <---

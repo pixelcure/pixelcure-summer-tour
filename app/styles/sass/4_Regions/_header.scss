@@ -1,0 +1,136 @@
+  ////////////////////////////////
+ // HEADER //////////////////////
+////////////////////////////////
+
+header {
+	background: #FFF;
+	@include box-shadow(0px 3px 5px rgba(0, 0, 0,0.5));
+	position: fixed!important;
+	z-index: 5;
+
+	&.scroll {
+		background:
+		nav {
+			display: none;
+			transition: 3s;
+		}
+	}
+
+	.inner-wrapper {
+		margin: 0 auto;
+
+		.container {
+			margin: 0;
+
+			.logo {
+				display: block;
+				float: left;
+				height: auto;
+				padding: 5px 0 0 0;
+				min-width: 145px;
+				width: percentage(140/960);
+				
+				@include max-screen(480px){
+					min-width: initial;
+					padding: 0;
+				}
+
+				&:hover {
+					opacity: .5;
+					transition: .6s;
+				}
+				
+				img.mobile-logo {
+					display: none;
+					width: 75px;
+
+					@include max-screen(480px){
+						display: block;
+					}
+				}
+
+				img.logo {
+					display: block;
+
+					@include max-screen(480px){
+							display: none;
+					}
+				}
+
+				a { display: block; }
+
+			} // end logo <--
+
+			nav {
+				padding: percentage(19/960);
+				margin-top: 16px;
+
+				@include max-screen(480px){
+					margin-top: 20px;
+				}
+
+				@include max-screen(375px){
+					margin-top: 0;
+				}
+				
+				ul {
+					float: right;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+
+					li {
+						float: left;
+
+						@include max-screen(375px){
+							float: none;
+						}
+
+						a {
+							color: $teal;
+							@include font-size(16px);
+							font-family: $oleo;
+							font-weight: 100;
+							display: block;
+							text-decoration: none;
+							
+							@include max-screen(480px){
+								@include font-size(14px);
+							}
+							
+							&:after {
+								content: "+";
+								@include font-size(16px);
+								color: $blood;
+								margin: 0 15px;
+
+								@include max-screen(480px){
+									@include font-size(13px);
+								}				
+
+								@include max-screen(375px){
+									margin: 0;
+									content: "";
+								}				
+							}
+
+							&:hover {
+								color: $blood;
+								transition: .4s;
+							}
+
+							&.last:after {
+								content: "";
+								margin: 0;
+							}
+						}
+					}
+				} 
+			} // end nav <---
+		
+		} // End Container
+
+
+	} // end inner <---
+
+} // End Header <---

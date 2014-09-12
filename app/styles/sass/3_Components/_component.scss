@@ -1,0 +1,49 @@
+  /////////////////////////////////////////
+ // Components ///////////////////////////
+/////////////////////////////////////////
+.welcome {
+	@extend .row;
+	background: $medicalGreen;
+	@include box-shadow(0px 3px 5px rgba(0, 0, 0,0.5));
+	padding: 85px 0 0 0;
+	
+	h1 {
+		color: $white;
+		font-family: $oleo;
+		@include font-size(28px);
+		font-weight: 100;
+		margin: 0;
+					
+	}
+
+} // End Welcome <---
+
+// Hire Tag
+.available {
+		bottom: -43px;
+		@include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+		position: relative;
+
+		@include max-screen(830px){
+			bottom: 0;
+			margin-top: 20px;			
+		}
+
+		@include max-screen(730px){
+			margin-top: 15px;
+		}
+
+		a {
+			background: $blood;
+			color: $white;
+			font-weight: 600;
+			font-family: $oleo;
+			@include font-size(14px);
+			padding: percentage(25/960);
+			@extend .button;
+
+			@include max-screen(850px){
+				@include font-size(12px);
+			}	
+		}
+} // End Available

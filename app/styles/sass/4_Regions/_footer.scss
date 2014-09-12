@@ -1,0 +1,74 @@
+  ///////////////////////////////////////
+ // FOOTER SECTION /////////////////////
+///////////////////////////////////////
+
+footer {
+	border-top: 30px solid $teal;
+	padding: 50px 0 25px 0;
+
+	.copywrite {
+		
+		@include max-screen(540px){
+			float: none;
+			@include font-size(11px);
+			width: 100%;
+		}
+	
+	} // end copywrite
+
+	nav {
+		margin-right: 0!important;
+
+		@include max-screen(540px){
+			float: none;
+			margin: 25px 0 0 0;
+			width: 100%!important;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			@include max-screen(540px){
+				float: none;
+				width: 100%;
+			}
+			
+			li {
+				float: left;
+
+				a {
+					color: $teal;
+					@include font-size(13px);
+					// font-family: $oleo;
+					font-weight: 100;
+					display: block;
+					text-decoration: none;
+
+					&:after {
+						content: "+";
+						@include font-size(13px);
+						color: $blood;
+						margin: 0 15px;
+
+						@include max-screen(380px){
+							margin: 0 10px;
+						}
+
+					}
+
+					&:hover {
+						color: $blood;
+						transition: .4s;
+					}
+
+					&.last:after {
+						content: "";
+						margin: 0;
+					}
+				}
+			}
+		} 
+	} // end nav <---	
+} // end Footer <---

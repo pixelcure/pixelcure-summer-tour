@@ -1,0 +1,92 @@
+  ////////////////////////////////
+ // LARGE ITEM MODAL ////////////
+////////////////////////////////
+
+#modal {
+	background: $teal;
+	display: none;
+	opacity: 1!important;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 200;
+
+	@include max-screen(760px){
+		position: absolute;
+	}
+
+	a.close {
+		@extend .button;
+		background: $blood;
+		color: $white;
+		display: block;
+		@include font-size(21px);
+		font-family: $openSans;
+		font-weight: 800;
+		height: 40px;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+		
+		&:hover {
+			background: $medicalGreen;
+		}
+
+	} // end Close Button
+
+	.item-large {
+		margin: 0;
+
+		img {
+			box-shadow: 0px 0px 13px $medicalGreen;
+
+			@include max-screen(760px){
+				float: none;
+				margin: 0;
+				width: 100%;
+			}
+
+		}
+
+
+		.info {
+			color: $white;
+			padding: percentage(26/1240);
+			margin-right: 0;
+			
+			@include max-screen(760px){
+				float: none;
+				width: 100%;
+			}
+			
+			h1.title {
+				border-bottom: 1px solid white;
+				font-weight: 100;
+				@include font-size(28px);
+				padding-bottom: 15px;
+
+			}
+
+			h2 {
+				font-weight: 100;
+				@include font-size(24px);
+				margin-bottom: 15px;
+			}
+
+			p {
+				@include font-size(16px);
+				line-height: 1.5em;
+			}
+
+			ul.technologies {
+				padding: 0 20px;
+				margin: 0;
+			}
+		}
+	}// End Item Large
+
+} // End Modal <---
