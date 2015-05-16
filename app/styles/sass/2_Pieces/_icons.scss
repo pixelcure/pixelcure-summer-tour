@@ -27,24 +27,27 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-zoomin:before {
+	content: "\e60e";
+}
 .icon-sad:before {
-	content: "\e600";
+	content: "\e609";
 }
 .icon-point-up:before {
-	content: "\e601";
+	content: "\e60a";
 }
 .icon-mail:before {
-	content: "\e602";
+	content: "\e605";
 }
 .icon-github:before {
-	content: "\e603";
+	content: "\e608";
 }
 .icon-linkedin:before {
-	content: "\e604";
+	content: "\e60b";
 }
 .icon-file-pdf:before {
-	content: "\e606";
+	content: "\e60c";
 }
 .icon-file-word:before {
-	content: "\e607";
+	content: "\e60d";
 }

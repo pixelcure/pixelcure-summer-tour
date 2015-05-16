@@ -5,21 +5,25 @@
 .view {
 
 	&.projects {
-		background: $teal;
 
 		h1.blurb {
-			color: $white;
+			color: $medicalGreen;
 			font-weight: 100;
 			@include font-size(21px);
 			// margin: 45px 0 45px 45px;
 		}
 
 		h2.blurb {
-			color: $white;
+			color: $medicalGreen;
 			font-weight: 100;
 			line-height: 1.5em;
 			margin: 45px 0 45px;
 			padding: 0 50px;
+			
+			span {
+				display: block;
+			}
+
 		}
 
 		.item-row {
@@ -33,6 +37,8 @@
 				margin: 8px 0 initial 0;
 				padding-bottom: 100px;
 			}
+			
+			span { display: none; }
 
 			&.last {
 				padding-bottom: 100px;
@@ -40,14 +46,16 @@
 			
 			.item {
 				cursor: pointer;
+				overflow: hidden;
+				position: relative;
 				
 				@include max-screen(960px){
 					transition: .5s;
 				}
 
-				&:hover {
-					opacity: .5;
-					transition: .5s;
+				img:hover {
+					transform: scale(1.05);
+					transition: .7s;
 				}
 
 				&:last-child { margin-right: 0; }

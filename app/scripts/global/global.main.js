@@ -33,23 +33,48 @@ define(['jquery', 'backbone'], function(){
 
 			},
 
-			// events
+			// events hash
 			events : {
-				'click a#topButton' : 'scrollUp'
+				'click a#topButton' : 'scrollUp',
+				'click nav a' : 'scrollLink'
 			},
 
-	        // Scroll Up
+	        // Scroll Up Top Button
 	        scrollUp : function (e) {
 
 	        	// prevent default action        	
 		        e.preventDefault();
 
 		        // animate scroll back to top of document
-		        $(document.body).animate({  
+		        $( 'body, html' ).animate({  
 		        	
 		        	scrollTop: '0'
 		          
-				}, 700);
+				}, 1000 );
+
+	        },
+
+	        // Scroll Link Animation
+	        scrollLink : function (e) {
+	        	
+	        	// prevent default action 
+	        	e.preventDefault();
+	        	
+	        	// the href url
+	        	var hashURL = $(e.currentTarget).attr('href');
+	        	
+	        	// offset from top of window
+	        	var offSet = $('section' + hashURL ).offset().bottom;
+
+	        	// set the hash URL to perform the default action
+	        	window.location.hash = hashURL;
+	        	
+	        	// animate to the section
+	        	$( 'body, html' ).animate({
+
+	        		scrollTop : offSet
+	        	
+	        	}, 1000 );
 
 	        }
 

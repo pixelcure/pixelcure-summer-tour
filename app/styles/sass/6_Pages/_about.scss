@@ -26,11 +26,11 @@
 
 		.about-inner {
 			background: $bgGreen;
+			background: rgba(243, 243, 243, 0.7);
 			overflow: hidden;
 			margin-top: 50px;
 			
 			@include max-height(1040px){
-				background: rgba(243, 243, 243, 1);
 			}
 
 			@include max-screen(960px){
