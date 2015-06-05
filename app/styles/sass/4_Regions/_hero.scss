@@ -113,7 +113,7 @@ section.hero {
 			.about-blurb {
 				margin-top: 55px;
 				
-				@inclue max-screen(1200px){
+				@include max-screen(1200px){
 					margin-top: 45px;
 				}
 
